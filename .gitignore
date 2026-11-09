@@ -1,0 +1,36 @@
+# O repositório guarda apenas código-fonte, queries SQL e configuração sem senhas.
+
+# ===== .NET =====
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+TestResults/
+*.trx
+*.coverage
+
+# ===== Node / front-end (Vite) =====
+node_modules/
+dist/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Segredos e configuração local =====
+# O .env guarda a connection string com senha e nunca vai para o GitHub.
+# No repositório fica só o modelo .env.example, sem senha.
+.env
+.env.*
+!.env.example
+
+# ===== IDEs e sistema operacional =====
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
+.DS_Store
+Thumbs.db
