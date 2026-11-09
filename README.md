@@ -27,3 +27,16 @@ RetroGames/
 ├── AGENTS.md                     regras do projeto para o assistente de IA
 └── .gitignore
 ```
+
+## Como rodar localmente
+
+1. **Banco** — no MySQL Workbench, selecione o banco do RetroGames (na sua máquina, crie-o uma vez com
+   `CREATE DATABASE retrogames;`; no laboratório, use o seu banco `db` + matrícula) e execute as queries
+   da pasta `database/` na ordem: `001_criar_tabelas.sql` e depois `002_dados_exemplo.sql`.
+   Os demais arquivos são consultas e testes: `003_consultas_catalogo.sql`, `004_testes_integridade.sql`
+   (rode um teste por vez) e os SQL de cada Repository.
+2. **Connection string** — na raiz, copie `.env.example` para `.env` e troque `SUA_SENHA` pela sua senha
+   do MySQL. O `.env` está no `.gitignore` e nunca vai para o GitHub. Para conferir servidor, porta e
+   usuário, rode `database/005_conexao.sql`.
+3. **Back-end** — `dotnet build` na raiz compila a solução.
+4. **Front-end** — `cd retrogames.web && npm install && npm run dev` abre em http://localhost:5173.
